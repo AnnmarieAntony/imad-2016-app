@@ -99,7 +99,7 @@ app.get('/', function (req, res) {
 });
 
 
-app.get(':/articlename',function (reg,res){
+app.get('/:articlename',function (reg,res){
     res.send(createhtmltemplate(articles[articlename]));
     var articlename= req.params.articlename;
 });
