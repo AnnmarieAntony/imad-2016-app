@@ -37,10 +37,10 @@ var articleone ={
 
 function createhtmltemplate(data){
     
-    var title=title.data;
-    var heading=heading.data;
-    var date=date.data;
-    var articleone=articleone.data;
+    var title=data.title;
+    var heading=data.heading;
+    var date=data.date;
+    var articleone=data.articleone;
     
 var htmltemplate=`
     <html>
