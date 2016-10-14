@@ -5,7 +5,9 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleone ={
+
+var articles ={
+ articleone1 :{
     title: 'Aticle-one | Ann',
     heading: 'Article One',
     date: 'Sep 15',
@@ -33,8 +35,29 @@ var articleone ={
            </p>
        </div>`
     
+},
+ articleone2 :{
+    title: 'Aticle-Two | Ann',
+    heading: 'Article Two',
+    date: 'Sep 15',
+    content : ` <div>
+           <p>
+           This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
+           </p>
+       </div>`
+       },
+       
+      articleone3 :{
+    title: 'Aticle-Three | Ann',
+    heading: 'Article Three',
+    date: 'Sep 15',
+    content : ` <div>
+           <p>
+           This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
+           </p>
+       </div>`
+       }
 };
-
 function createhtmltemplate(data){
     
     var title=data.title;
@@ -76,8 +99,8 @@ app.get('/', function (req, res) {
 });
 
 
-app.get('/article-one',function (reg,res){
-    res.send(createhtmltemplate(articleone));
+app.get('/articlename',function (reg,res){
+    res.send(createhtmltemplate(articles[articlename]));
 });
 
 app.get('/article-two',function (reg,res){
