@@ -60,7 +60,7 @@ var htmltemplate=`
        <div>
            ${date};
        </div>
-       ${articleone};
+       ${content};
        </div>
     </body>
 </html>
