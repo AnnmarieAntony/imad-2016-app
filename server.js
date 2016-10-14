@@ -39,7 +39,7 @@ function createhtmltemplate(data){
     
     var title=title.data;
     var heading=heading.data;
-    var dat=date.data;
+    var date=date.data;
     var articleone=articleone.data;
     
 var htmltemplate=`
