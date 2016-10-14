@@ -42,7 +42,7 @@ function createhtmltemplate(data){
     var dat=date.data;
     var articleone=articleone.data;
     
-var htmltemplte=`
+var htmltemplate=`
     <html>
     <head>
         <title>
