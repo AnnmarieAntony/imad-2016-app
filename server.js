@@ -46,7 +46,7 @@ var htmltemplate=`
     <html>
     <head>
         <title>
-            $(title);
+            ${title};
         </title>
     </head>
     <body>
@@ -55,12 +55,12 @@ var htmltemplate=`
        </div> 
        <hr/>
        <h3>
-           $(heading);
+           ${heading};
        </h3>
        <div>
-           $(date);
+           ${date};
        </div>
-       $(articleone);
+       ${articleone};
        </div>
     </body>
 </html>
