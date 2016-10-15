@@ -6,105 +6,11 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articles ={
- 'article-one' :{
-    title: 'Article-one | Ann',
-    heading: 'Article One',
-    date: 'Sep 15',
-    content : ` <div>
-           <p>
-           This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
-           </p>
-       </div>
-       
-       <div>
-           <p>
-           This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
-           </p>
-       </div>
-       
-       <div>
-           <p>
-           This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
-           </p>
-       </div>
-       
-       <div>
-           <p>
-           This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
-           </p>
-       </div>`
-    
-},
- 'article-two' :{
-    title: 'Article-Two | Ann',
-    heading: 'Article Two',
-    date: 'Sep 15',
-    content : ` <div>
-           <p>
-           This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
-           </p>
-       </div>`
-       },
-       
-      'article-three' :{
-    title: 'Article-Three | Ann',
-    heading: 'Article Three',
-    date: 'Sep 15',
-    content : ` <div>
-           <p>
-           This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
-           </p>
-       </div>`
-       }
-};
-function createhtmltemplate(data){
-    
-    var title=data.title;
-    var heading=data.heading;
-    var date=data.date;
-    var content=data.content;
-    
-var htmltemplate=`
-    <html>
-    <head>
-        <title>
-            ${title}
-        </title>
-        <meta name="viewport" content="width-device-width ,initial-scale=1" />
-        <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-       <div>
-           <a href ="/">Home</a>
-       </div> 
-       <hr/>
-       <h3>
-           ${heading}
-       </h3>
-       <div>
-           ${date}
-       </div>
-       ${content}
-       </div>
-    </body>
-</html>
-
-    
-`;
-return htmltemplate;
-}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 
-app.get('/:articlename',function (req,res){
-    var articlename= req.params.articlename;
-    res.send(createhtmltemplate(articles[articlename]));
-    
-    
-});
 
 
 
